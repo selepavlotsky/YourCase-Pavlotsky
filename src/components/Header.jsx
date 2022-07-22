@@ -5,7 +5,7 @@ const Header = () => {
     <header>
       <div className="header-container wrapper">
         <div>
-          <img src="" alt="" />
+          <h1>YourCase</h1>
         </div>
 
         <NavBar />
