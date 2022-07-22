@@ -10,6 +10,10 @@ width: 90%;
 max-width: 1300px;
 }
 
-.header-container {
+header{
   background-color: black;
+}
+
+nav ul li a {
+color: yellow;
 }
