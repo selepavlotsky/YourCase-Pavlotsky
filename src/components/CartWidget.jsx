@@ -1,5 +1,5 @@
 const CartWidget = () => {
-  return <i class="fa-solid fa-bag-shopping"></i>;
+  return <span className="material-symbols-outlined">shopping_bag</span>;
 };
 
 export default CartWidget;

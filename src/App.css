@@ -57,3 +57,14 @@ font-weight: bold;
   color: #e6c019;
   text-align: center;
 }
+
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.material-symbols-outlined {
+ font-size: 30px;
+
+}
