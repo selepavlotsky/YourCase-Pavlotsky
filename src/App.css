@@ -11,7 +11,7 @@ max-width: 1300px;
 }
 
 header{
-  background-color:#3cbb9b ;
+  background-color:#e6c019 ;
   padding: 20px;
 }
 
@@ -24,6 +24,10 @@ header{
 .header-container h1{
   color:#3a312c ;
   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.header-logo{
+  width: 20%;
 }
 
 nav ul {
@@ -42,4 +46,14 @@ color:#3a312c ;
 text-decoration: none;
 font-size: 18px;
 font-weight: bold;
+}
+
+.greeting-container {
+  background-color: #3a312c;
+  padding: 15px;
+}
+
+.greeting-container h1 {
+  color: #e6c019;
+  text-align: center;
 }
