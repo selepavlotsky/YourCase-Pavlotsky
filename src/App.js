@@ -6,17 +6,15 @@ import ItemListContainer from "./components/ItemListContainer";
 
 function App() {
   return (
-    <div>
-      <body>
-        <Header />
+    <>
+      <Header />
 
-        <ItemListContainer greeting="Bienvenido, proximamente vas a poder ver la nueva colección!" />
+      <ItemListContainer greeting="Bienvenido, proximamente vas a poder ver la nueva colección!" />
 
-        <Main />
+      <Main />
 
-        <Footer />
-      </body>
-    </div>
+      <Footer />
+    </>
   );
 }
 
