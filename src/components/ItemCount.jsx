@@ -3,10 +3,6 @@ import { useState } from "react";
 const ItemCount = ({ stock, inicial, onAdd }) => {
   const [contador, setContador] = useState(inicial);
 
-  //const resultado = useState(0);
-  //let contador = resultado(0);
-  //const setContador = resultado[1];
-
   const aumentarContador = () => {
     if (contador < stock) {
       setContador(contador + 1);

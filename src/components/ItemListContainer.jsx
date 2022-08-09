@@ -1,16 +1,27 @@
-import ItemCount from "./ItemCount";
+import React from "react";
+import { customFetch } from "../assets/customFetch";
+import { useState, useEffect } from "react";
+import { products } from "../assets/products";
+import ItemList from "./ItemList";
+import ClipLoader from "react-spinners/ClipLoader";
 
-const ItemListContainer = ({ greeting }) => {
-  const onAdd = (cantidad) => {
-    console.log(cantidad);
-  };
+const ItemListContainer = () => {
+  const [listProducts, setListProducts] = useState([]);
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    customFetch(products).then((data) => {
+      setLoading(true);
+      setListProducts(data);
+    });
+  }, []);
 
   return (
-    <div className="greeting-container">
-      <h1>{greeting}</h1>
+    <>
+      <div className="cliploader">{!loading && <ClipLoader />}</div>
 
-      <ItemCount stock={10} inicial={0} onAdd={onAdd} />
-    </div>
+      {loading && <ItemList listProducts={listProducts} />}
+    </>
   );
 };
 

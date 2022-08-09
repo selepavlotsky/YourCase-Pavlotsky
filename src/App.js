@@ -1,19 +1,21 @@
+import React from "react";
 import "./App.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Main from "./components/Main";
-import ItemListContainer from "./components/ItemListContainer";
+
+import { BrowserRouter } from "react-router-dom";
 
 function App() {
   return (
     <>
-      <Header />
+      <BrowserRouter>
+        <Header />
 
-      <ItemListContainer greeting="Bienvenido, proximamente vas a poder ver la nueva colección!" />
+        <Main />
 
-      <Main />
-
-      <Footer />
+        <Footer />
+      </BrowserRouter>
     </>
   );
 }

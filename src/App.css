@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Quicksand', sans-serif;
 }
 
 .wrapper{
@@ -11,8 +12,9 @@ max-width: 1300px;
 }
 
 header{
-  background-color:#e6c019 ;
+  
   padding: 20px;
+  border-bottom: 1px solid rgba(228, 217, 217, 0.534);
 }
 
 .header-container {
@@ -23,7 +25,7 @@ header{
 
 .header-container h1{
   color:#3a312c ;
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+ 
 }
 
 .header-logo{
@@ -48,17 +50,6 @@ font-size: 18px;
 font-weight: bold;
 }
 
-.greeting-container {
-  background-color: #3a312c;
-  padding: 15px;
- 
-}
-
-.greeting-container h1 {
-  color: #e6c019;
-  text-align: center;
-  margin-bottom: 10px;
-}
 
 
 nav {
@@ -111,4 +102,59 @@ font-weight: bold;
 cursor: pointer;
 
 
+}
+
+.productos-container {
+  margin-top: 60px;
+  display: grid;
+  grid-template-columns: minmax(0,33.3fr)  minmax(0,33.3fr)  minmax(0,33.3fr);
+  gap: 40px;
+  
+}
+
+.products-image {
+  width: 70%;
+  margin: 5px;
+}
+
+.productos-detalle-container {
+  text-align: center;
+  border: #b8b5b55b 1px solid;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.product-name{
+  font-size: 16px;
+  font-weight: bold  ;
+}
+
+ .productos h1, .contacto h1{
+  text-align: center;
+  margin:15px 0 ;
+}
+
+.cliploader {
+  text-align: center;
+
+}
+
+.home-seccion {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+}
+
+.home-seccion img {
+ width: 40%;
+ text-align: center;
+
+}
+
+.home-container p {
+  font-size: 50px;
+  text-align: center;
+  padding-top: 50px;
 }
