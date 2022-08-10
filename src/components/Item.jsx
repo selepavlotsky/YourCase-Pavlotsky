@@ -11,8 +11,7 @@ const Item = ({ product }) => {
             src={product.imagen}
             alt="foto de funda"
           />
-          <p>{product.precio}</p>
-          <p>{product.stock}</p>
+          <p className="product-precio">$ {product.precio}</p>
           <button>Ver detalle</button>
         </div>
       </div>

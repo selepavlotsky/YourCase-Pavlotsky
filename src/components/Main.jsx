@@ -3,6 +3,7 @@ import ItemListContainer from "./ItemListContainer";
 import home from "../assets/home.png";
 import home2 from "../assets/home2.png";
 import home3 from "../assets/home3.png";
+import ItemDetailContainer from "./ItemDetailContainer";
 
 const Main = () => {
   return (
@@ -20,6 +21,8 @@ const Main = () => {
       <section className="productos wrapper">
         <h1>Productos</h1>
         <ItemListContainer />
+
+        <ItemDetailContainer />
       </section>
       <section className="contacto wrapper">
         <h1>Contacto</h1>

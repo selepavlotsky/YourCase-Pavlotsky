@@ -80,7 +80,7 @@ nav {
 .container-contador button {
   background-color: white;
   border: none;
-  color: rgb(0, 174, 255);
+  color: rgba(158, 157, 157, 0.664);
   font-size: 22px;
   font-weight: bold;
 }
@@ -92,12 +92,12 @@ text-align: center;
 }
 
 .button-onAdd button {
- background-color:#3a312c;
+ background-color:white;
 border-radius: 5px;
-border:#e6c019 1px solid;
+border:#9e9c9cd7 1px solid;
 padding: 4px 15px;
 margin-top: 10px;
-color: #e6c019;
+color: #9b9999a2;
 font-weight: bold;
 cursor: pointer;
 
@@ -157,4 +157,33 @@ cursor: pointer;
   font-size: 50px;
   text-align: center;
   padding-top: 50px;
+}
+
+.detail {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 30px 0;
+  border: 1px solid grey;
+}
+
+.name-detail {
+  font-size: 30px;
+  font-weight: bold;
+  margin: 15px 0;
+ 
+}
+
+.container-description {
+  text-align: center;
+}
+
+.container-description p {
+  margin: 10px;
+  font-size: 20px;
+}
+
+.pagos-img {
+  width: 60%;
+  margin-top: 10px;
 }
