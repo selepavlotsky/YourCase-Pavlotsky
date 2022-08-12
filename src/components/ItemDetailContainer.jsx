@@ -5,16 +5,18 @@ import { customFetch } from "../assets/customFetch";
 import { products } from "../assets/products";
 import ItemDetail from "./ItemDetail";
 
-const ItemDetailContainer = () => {
-  const [product, setProduct] = useState(null);
+const ItemDetailContainer = ({ id }) => {
+  const [product, setProduct] = useState([]);
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     setLoading(true);
-    customFetch(products[1]).then((data) => {
-      setLoading(false);
-      setProduct(data);
-    });
+    customFetch(products.filter((product) => product.id === id)).then(
+      (data) => {
+        setLoading(false);
+        setProduct(data);
+      }
+    );
   }, []);
 
   return (

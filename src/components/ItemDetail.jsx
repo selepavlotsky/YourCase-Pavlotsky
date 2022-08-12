@@ -8,7 +8,6 @@ const ItemDetail = ({ product }) => {
       <img className="image-detail" src={product.imagen} alt="foto de funda" />
       <div className="container-description">
         <div className="name-detail">{product.producto}</div>
-
         <p className=" price-detail">$ {product.precio}</p>
         <p className="stock-detail">Stock disponible: {product.stock}</p>
         <ItemCount stock={100} inicial={1} onAdd={() => {}} />

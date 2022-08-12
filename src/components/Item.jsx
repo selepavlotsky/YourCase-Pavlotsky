@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import ItemDetail from "./ItemDetail";
 
 const Item = ({ product }) => {
   return (
@@ -12,7 +14,9 @@ const Item = ({ product }) => {
             alt="foto de funda"
           />
           <p className="product-precio">$ {product.precio}</p>
-          <button>Ver detalle</button>
+          <Link to="/detalle" className="item-button-detail">
+            Ver detalle
+          </Link>
         </div>
       </div>
     </>
