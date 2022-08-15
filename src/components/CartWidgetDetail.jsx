@@ -2,7 +2,7 @@ import React from "react";
 
 const CartWidgetDetail = () => {
   return (
-    <div>
+    <div className="carrito-compras-detail  wrapper">
       <h1>Tu carrito de compras:</h1>
     </div>
   );

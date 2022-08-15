@@ -61,6 +61,9 @@ nav {
 .material-symbols-outlined {
  font-size: 30px;
  cursor: pointer;
+ color:#3a312c ;
+ margin-top: 20px;
+
 
 }
 
@@ -109,6 +112,7 @@ cursor: pointer;
   display: grid;
   grid-template-columns: minmax(0,33.3fr)  minmax(0,33.3fr)  minmax(0,33.3fr);
   gap: 40px;
+  margin-bottom: 60px;
   
 }
 
@@ -120,18 +124,37 @@ cursor: pointer;
 .productos-detalle-container {
   text-align: center;
   border: #b8b5b55b 1px solid;
-  padding: 10px;
+  padding: 20px;
   border-radius: 5px;
 }
 
 .product-name{
-  font-size: 16px;
+  font-size: 20px;
   font-weight: bold  ;
+  color: black;
+  text-decoration: none;
+
 }
 
  .productos h1, .contacto h1{
   text-align: center;
   margin:15px 0 ;
+}
+
+.product-precio {
+  margin: 15px;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+}
+
+.item-button-detail {
+  border: 1px solid grey;
+  padding: 5px 12px;
+  margin: 15px;
+  text-decoration: none;
+  font-size: 18px;
+  color:  black;
 }
 
 .cliploader {
@@ -187,3 +210,79 @@ cursor: pointer;
   width: 60%;
   margin-top: 10px;
 }
+
+.categorias-productos ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.categorias-productos ul li {
+  margin: 30px;
+  list-style: none;
+}
+
+.categories-detail {
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+  font-weight: bold;
+  padding: 12px;
+  border-bottom: 1px solid rgba(161, 160, 160, 0.596) ;
+}
+
+footer {
+  border-top: 1px solid rgba(228, 217, 217, 0.534);
+}
+
+.footer-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+}
+.footer-container p {
+  font-size: 18px;
+  font-weight: bold;
+  
+}
+
+.footer-container img {
+  width: 20%;
+}
+
+.contacto-container {
+  text-align: center;
+
+}
+
+
+.contacto-detalle {
+  margin: 30px;
+  border-top: 1px solid#9b9999a2;
+  border-bottom: 1px solid#9b9999a2;
+  padding: 20px;
+}
+
+.contacto-detalle h1 {
+  font-size: 32px;
+}
+
+
+.group-contact {
+  margin: 20px;
+  padding: 30px;
+
+}
+
+.group-contact h1 {
+  padding: 20px;
+}
+
+.carrito-compras-detail {
+  text-align: center;
+}
+
+
+

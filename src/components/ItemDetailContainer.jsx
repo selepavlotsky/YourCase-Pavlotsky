@@ -1,13 +1,15 @@
 import React from "react";
 import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 import ClipLoader from "react-spinners/ClipLoader";
 import { customFetch } from "../assets/customFetch";
 import { products } from "../assets/products";
 import ItemDetail from "./ItemDetail";
 
-const ItemDetailContainer = ({ id }) => {
+const ItemDetailContainer = () => {
   const [product, setProduct] = useState([]);
   const [loading, setLoading] = useState(false);
+  const { id } = useParams();
 
   useEffect(() => {
     setLoading(true);
@@ -17,7 +19,7 @@ const ItemDetailContainer = ({ id }) => {
         setProduct(data);
       }
     );
-  }, []);
+  }, [id]);
 
   return (
     <>

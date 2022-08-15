@@ -1,18 +1,19 @@
 import React from "react";
+import LogoImg from "../assets/logo.png";
 
 const Footer = () => {
   return (
-    <div>
-      <div>
-        <img src="" alt="" />
-        <p>Desde tu primer teléfono en adelante..</p>
-      </div>
+    <footer>
+      <div className="footer-container wrapper">
+        <img
+          className="header-logo"
+          src={LogoImg}
+          alt="Logo principal de Your Case"
+        />
 
-      <div>
-        <p>Sitio Web:</p>
-        <p>Selene Pavlotsky</p>
+        <p>Sitio Web: Selene Pavlotsky</p>
       </div>
-    </div>
+    </footer>
   );
 };
 
