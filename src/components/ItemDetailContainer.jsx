@@ -7,18 +7,17 @@ import { products } from "../assets/products";
 import ItemDetail from "./ItemDetail";
 
 const ItemDetailContainer = () => {
-  const [product, setProduct] = useState([]);
+  const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(false);
-  const { id } = useParams();
+
+  const id = parseInt(useParams().id);
 
   useEffect(() => {
     setLoading(true);
-    customFetch(products.filter((product) => product.id === id)).then(
-      (data) => {
-        setLoading(false);
-        setProduct(data);
-      }
-    );
+    customFetch(products.find((product) => product.id === id)).then((data) => {
+      setLoading(false);
+      setProduct(data);
+    });
   }, [id]);
 
   return (

@@ -8,22 +8,22 @@ const ItemList = ({ listProducts }) => {
       <div className="categorias-productos wrapper">
         <ul>
           <li>
-            <Link className="categories-detail" to="/productos/:iphone13">
+            <Link className="categories-detail" to="/productos/iphone-13">
               Iphone 13
             </Link>
           </li>
           <li>
-            <Link className="categories-detail" to="/productos/:iphone12">
+            <Link className="categories-detail" to="/productos/iphone-12">
               Iphone 12
             </Link>
           </li>
           <li>
-            <Link className="categories-detail" to="/productos/:iphone11">
+            <Link className="categories-detail" to="/productos/iphone-11">
               Iphone 11
             </Link>
           </li>
           <li>
-            <Link className="categories-detail" to="/productos/:iphoneXs">
+            <Link className="categories-detail" to="/productos/iphone-xs">
               Iphone Xs
             </Link>
           </li>

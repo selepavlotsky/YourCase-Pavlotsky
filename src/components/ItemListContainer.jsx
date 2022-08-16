@@ -10,12 +10,20 @@ const ItemListContainer = () => {
   const [listProducts, setListProducts] = useState([]);
   const [loading, setLoading] = useState(false);
 
+  const id = useParams().id;
+
   useEffect(() => {
-    customFetch(products).then((data) => {
+    setLoading(false);
+    customFetch(
+      products.filter((product) => {
+        if (!id) return true;
+        return product.categoriaUrl === id;
+      })
+    ).then((data) => {
       setLoading(true);
       setListProducts(data);
     });
-  }, []);
+  }, [id]);
 
   return (
     <>
