@@ -1,15 +1,17 @@
 import React from "react";
 import ItemCount from "./ItemCount";
-import mediosPago from "../assets/mediosPago.png";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { useCarrito } from "./CartContext";
 
 const ItemDetail = ({ product }) => {
   const [displaycount, setDisplaycount] = useState(true);
 
+  const { addProduct } = useCarrito();
+
   const onAdd = (contador) => {
-    product.cantidad = contador;
     setDisplaycount(false);
+    addProduct(product, contador);
   };
 
   return (
@@ -22,9 +24,15 @@ const ItemDetail = ({ product }) => {
         {displaycount ? (
           <ItemCount stock={100} inicial={1} onAdd={onAdd} />
         ) : (
-          <Link className="finalizar-compra" to="/cart">
-            Terminar la compra
-          </Link>
+          <>
+            <Link className="finalizar-compra" to="/cart">
+              Terminar la compra
+            </Link>
+
+            <Link to="/productos" className="continuar-compra">
+              Seguir comprando
+            </Link>
+          </>
         )}
       </div>
     </div>

@@ -6,7 +6,7 @@ export const products = [
       "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/HQ0V2?wid=572&hei=572&fmt=jpeg&qlt=95&.v=1649352695527",
     categoria: "Iphone 13",
     categoriaUrl: "iphone-13",
-    precio: 2000,
+    precio: 1000,
     stock: 100,
   },
 
@@ -27,7 +27,7 @@ export const products = [
       "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/MM2X3?wid=572&hei=572&fmt=jpeg&qlt=95&.v=1630622653000",
     categoria: "Iphone 13",
     categoriaUrl: "iphone-13",
-    precio: 2000,
+    precio: 3000,
     stock: 100,
   },
   {
@@ -37,7 +37,7 @@ export const products = [
       "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/MM103?wid=572&hei=572&fmt=jpeg&qlt=95&.v=1630102370000",
     categoria: "Iphone 13",
     categoriaUrl: "iphone-13",
-    precio: 2000,
+    precio: 4000,
     stock: 100,
   },
   {
