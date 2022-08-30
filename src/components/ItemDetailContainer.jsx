@@ -21,7 +21,7 @@ const ItemDetailContainer = () => {
     consulta
       .then((product) => {
         setLoading(false);
-        setProduct(product.data());
+        setProduct({ ...product.data(), id });
       })
 
       .catch((err) => {
