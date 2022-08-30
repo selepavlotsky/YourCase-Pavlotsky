@@ -1,10 +1,10 @@
 import React from "react";
-import { customFetch } from "../assets/customFetch";
 import { useState, useEffect } from "react";
-import { products } from "../assets/products";
 import ItemList from "./ItemList";
 import ClipLoader from "react-spinners/ClipLoader";
 import { useParams } from "react-router-dom";
+import { db } from "../fireBase";
+import { collection, getDocs, query, where } from "firebase/firestore";
 
 const ItemListContainer = () => {
   const [listProducts, setListProducts] = useState([]);
@@ -13,16 +13,28 @@ const ItemListContainer = () => {
   const id = useParams().id;
 
   useEffect(() => {
+    const productosCollection = collection(db, "productos");
+
+    const filtro = !id
+      ? query(productosCollection)
+      : query(productosCollection, where("categoriaUrl", "==", id));
+    const consulta = getDocs(filtro);
     setLoading(false);
-    customFetch(
-      products.filter((product) => {
-        if (!id) return true;
-        return product.categoriaUrl === id;
+
+    consulta
+      .then((snapshot) => {
+        const listProducts = snapshot.docs.map((doc) => {
+          return {
+            ...doc.data(),
+            id: doc.id,
+          };
+        });
+        setLoading(true);
+        setListProducts(listProducts);
       })
-    ).then((data) => {
-      setLoading(true);
-      setListProducts(data);
-    });
+      .catch((err) => {
+        console.log(err);
+      });
   }, [id]);
 
   return (
