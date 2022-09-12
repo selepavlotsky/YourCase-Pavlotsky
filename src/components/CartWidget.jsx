@@ -8,8 +8,10 @@ const CartWidget = () => {
 
   return (
     <Link to="/Cart">
-      <span className="material-symbols-outlined">shopping_bag</span>
-      {getQuantity()};
+      <div className="shop-cart">
+        <span className="material-symbols-outlined">shopping_bag</span>
+        {getQuantity()};
+      </div>
     </Link>
   );
 };

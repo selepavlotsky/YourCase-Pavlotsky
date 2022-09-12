@@ -24,7 +24,7 @@ const ItemDetail = ({ product }) => {
         {displaycount ? (
           <ItemCount stock={100} inicial={1} onAdd={onAdd} />
         ) : (
-          <>
+          <div className="container-compras">
             <Link className="finalizar-compra" to="/cart">
               Terminar la compra
             </Link>
@@ -32,7 +32,7 @@ const ItemDetail = ({ product }) => {
             <Link to="/productos" className="continuar-compra">
               Seguir comprando
             </Link>
-          </>
+          </div>
         )}
       </div>
     </div>

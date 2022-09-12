@@ -75,36 +75,46 @@ const CartWidgetDetail = () => {
                 <p>Cantidad:{item.cantidad} </p>
                 <p>Precio : {item.cantidad * item.precio}</p>
 
-                <button onClick={() => deleteProduct(item.id)}>Eliminar</button>
+                <button
+                  className="button-eliminar"
+                  onClick={() => deleteProduct(item.id)}
+                >
+                  Eliminar
+                </button>
               </div>
             </div>
           ))}
           <p>Precio total : {getPrice()}</p>
 
-          <button onClick={clearCart}>Vaciar carrito</button>
+          <button className="button-clear" onClick={clearCart}>
+            Vaciar carrito
+          </button>
 
-          <div>
+          <div className="finalizacion-compra">
             <h1>Para finalizar su compra complete el siguiente formulario</h1>
-            <form onSubmit={handleConfirm}>
+            <form className="form-container" onSubmit={handleConfirm}>
               <input
+                className="form-group"
                 type="text"
                 placeholder="Nombre completo"
                 onChange={handleChangeNombre}
                 value={nombre}
               />
               <input
+                className="form-group"
                 type="text"
                 placeholder="Teléfono"
                 onChange={handleChangeTelefono}
                 value={telefono}
               />
               <input
+                className="form-group"
                 type="text"
                 placeholder="Email"
                 onChange={handleChangeEmail}
                 value={email}
               />
-              <button>Finalizar la compra</button>
+              <button className="button-form">Finalizar la compra</button>
             </form>
           </div>
         </>
@@ -114,8 +124,10 @@ const CartWidgetDetail = () => {
         </div>
       ) : (
         <div>
-          <p>No hay productos en tu carrito</p>
-          <Link to="/productos">Ir a comprar a productos</Link>
+          <p className="sin-productos">No hay productos en tu carrito</p>
+          <Link className="mas-productos" to="/productos">
+            Ir a comprar a productos
+          </Link>
         </div>
       )}
     </div>
